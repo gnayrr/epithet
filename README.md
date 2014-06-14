@@ -39,23 +39,36 @@ Epithet turns ye olde textarea in to something akin to basic plain text editors 
   ```
 
 ##API
-###.on(element:HTMLElement)
-Enhance the specified element, if it is a textarea element. Otherwise does nothing.
 
-###.on(class:String)
-Finds all occurrences of textareas with the specified class name. Then enchance each element that is a textarea and has not been enhanced.
+###.on
 
-###.on()
-Turn on enhancements for all previously enhanced elements. This reverses the affect of `epithet.off()`.
+1. `.on(element:HTMLElement)`
 
-###.off(element:HTMLElement)
-Turn off Epithet enhancements for the specified element.
+  Enhance the specified element, if it is a textarea element. Otherwise does nothing.
 
-###.off(class:String)
-Turn off Epithet enhancements for all elements with the specified class name.
+2. `.on(class:String)`
 
-###.off()
-Turn off Epithet enhancements for all elements. 
+  Finds all occurrences of textareas with the specified class name. Then enchance each element that is a textarea and has not been enhanced.
+
+3. `.on()`
+
+  Turn on enhancements for all previously enhanced elements. This reverses the affect of `epithet.off()`.
+
+
+###.off
+
+1. `.off(element:HTMLElement)`
+
+  Turn off Epithet enhancements for the specified element.
+
+2. `.off(class:String)`
+
+  Turn off Epithet enhancements for all elements with the specified class name.
+
+3. `.off()`
+
+  Turn off Epithet enhancements for all elements. 
+
 
 ###.reset()
 Completely remove any trace of Epithet from all elements.
