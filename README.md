@@ -48,7 +48,7 @@ Turns ye olde textarea in to something akin to basic plain text editors of the 8
 
 3. `.on()`
 
-  Turn on enhancements for all previously enhanced elements. This reverses the affect of `epithet.off()`.
+  Turn on enhancements for all previously enhanced elements. This reverses the effect of `epithet.off()`.
 
 
 ###.off
