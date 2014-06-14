@@ -1,11 +1,7 @@
 Epithet
 =======
 
-Enhanced Native textarea
-
-
-##Introduction
-Epithet turns ye olde textarea in to something akin to basic plain text editors of the 80’s. It does so without messing with other native commands like copy/pase, undo/redo, and the contextmenu. This is as native as it gets.
+Turns ye olde textarea in to something akin to basic plain text editors of the 80’s. It does so without messing with other native commands like copy/pase, undo/redo, and the contextmenu. This is as native as it gets.
 
 ##Features
 
