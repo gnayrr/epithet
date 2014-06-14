@@ -70,4 +70,21 @@ Turns ye olde textarea in to something akin to basic plain text editors of the 8
 Completely remove any trace of Epithet from all elements.
 
 ###Element.$epithet
-This is special object added to every enhanced textarea. It offers you a number of useful methods:
+This is special object added to every enhanced textarea. It offers a number of useful methods.
+
+1. `insertText()`
+1. `getText()`
+1. `setText()`
+1. `getSelection()`
+1. `setSelection()`
+1. `getCursor()`
+1. `setCursor()`
+
+
+
+
+
+
+
+
+
