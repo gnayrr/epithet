@@ -1,0 +1,40 @@
+{
+  "name": "Epithet",
+  "description": "Enhanced Native textarea",
+  "version": "0.1.1",
+  "homepage": "http://gnayrr.github.io/epithet",
+  "author": {
+    "name": "gnayrr",
+    "url": "http://gnayrr.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gnayrr/epithet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gnayrr/epithet/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/gnayrr/epithet/blob/master/LICENSE"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "requirejs": "*",
+    "lodash": "*",
+    "grunt": "*",
+    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-requirejs": "~0.4.4"
+  }
+}
