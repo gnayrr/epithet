@@ -21,7 +21,6 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 2. Once your page is loaded, you're ready to start using epithet
 
   ```js
-  // enable all enhancements for each textarea elements
   epithet.on();
   ```
 
@@ -29,31 +28,90 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 
 ###`.use()`
 
-Set which enhancements are enabled.
+Select the enhancements to use.
 
-> **Alias:** `epithet()`
-
-
-> **Parameters:**
->
-> Enhancements to use, 'or `'all'`/`'none'` to enable/disable all enhancements
->
-> Default: `'all'`
+**Alias:** `epithet()`
 
 
-> **Example**:
+**Parameters:**
 
-> ```js
-> epithet.use('textInput').on();
+Default: `'all'`
 
-> epithet.use('textInput', 'tab').on();
+Enhancements to use, 'or `'all'`/`'none'` to enable/disable all enhancements
 
-> // or use the alias...
-> epithet('textInput', 'tab').on();
-> ```
+
+**Example**:
+
+```js
+epithet.use('textInput').on();
+
+epithet.use('textInput', 'tab').on();
+
+// or use the alias...
+epithet('textInput', 'tab').on();
+```
+
 
 ###`.on()`
 
-Enable enhancements on textarea elements. Invoking this method on already enhanced elements reconfigures the element.
+Enable selected enhancements on textarea elements. Invoking this method on already enhanced elements reconfigures the element.
+
+**Parameters:**
+
+The textarea element to enhance. If omitted, all textarea elements are enhanced.
+
+**Example:**
+
+```js
+// enable all enhancements for all textarea
+epithet.on()
+
+// enable 'textInput' enhancement for all textarea
+epithet('textInput').on();
+
+// enable all enhancements for one textarea
+var el = document.getElementById('editor');
+epithet.on(el);
+```
+
+
+###`.off()`
+
+Disables all enhancements.
+
+**Parameters:**
+
+Disables all enhancements on either the specified element, or all textarea elements. 
+
+**Example:**
+
+```js
+// disable all enhancements for all textarea
+epithet.off()
+
+// disable all enhancements for one textarea
+var el = document.getElementById('editor');
+epithet.off(el);
+```
+
+
+###`.reset()`
+
+Removes any trace of epithet enhancements.
+
+**Example:**
+
+```js
+// remove epithet from all textarea
+epithet.reset()
+
+// remove epithet from one textarea
+var el = document.getElementById('editor');
+epithet.reset(el);
+```
+
+
+
+
 
 
