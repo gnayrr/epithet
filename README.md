@@ -21,6 +21,7 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 2. Once your page is loaded, you're ready to start using epithet
 
   ```js
+  // enable all enhancements for each textarea elements
   epithet.on();
   ```
 
@@ -28,24 +29,31 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 
 ###`.use()`
 
-Set which enhancements are enabled. Also accept `'all'` and `'none'` as parameters to enable/disable all enhancements.
+Set which enhancements are enabled.
 
-**Default**: `'all'`
-
-**Alias**: `epithet()`
-
-**Example**:
+> **Alias:** `epithet()`
 
 
-```js
-var el = document.getElementById('editor');
+> **Parameters:**
+>
+> Enhancements to use, 'or `'all'`/`'none'` to enable/disable all enhancements
+>
+> Default: `'all'`
 
-epithet.use('textInput').on(el);
 
-epithet.use('textInput', 'tab').on(el);
+> **Example**:
 
-// or use the alias...
-epithet('textInput', 'tab').on(el);
+> ```js
+> epithet.use('textInput').on();
 
-```
+> epithet.use('textInput', 'tab').on();
+
+> // or use the alias...
+> epithet('textInput', 'tab').on();
+> ```
+
+###`.on()`
+
+Enable enhancements on textarea elements. Invoking this method on already enhanced elements reconfigures the element.
+
 
