@@ -60,7 +60,7 @@ Enable selected enhancements on textarea elements. Invoking this method on alrea
 
 **Parameter:**
 
-> The textarea element to enhance. If omitted, all textarea elements are enhanced.
+> The textarea element to enhance. If omitted, all textarea elements are enhanced
 
 **Example:**
 
@@ -85,7 +85,7 @@ Disables all enhancements.
 
 **Parameter:**
 
-> The textarea element to unenhance. If omitted, all textarea elements are unenhanced.
+> The textarea element to unenhance. If omitted, all textarea elements are unenhanced
 
 **Example:**
 
@@ -115,9 +115,3 @@ Removes any trace of epithet enhancements.
 > var el = document.getElementById('editor');
 > epithet.reset(el);
 > ```
-
-
-
-
-
-
