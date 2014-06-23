@@ -26,7 +26,7 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 
 ##API
 
-###`.use()`
+###`.use(,enhancement)`
 
 Select the enhancements to use.
 
@@ -52,11 +52,11 @@ epithet('textInput', 'tab').on();
 ```
 
 
-###`.on()`
+###`.on(element)`
 
 Enable selected enhancements on textarea elements. Invoking this method on already enhanced elements reconfigures the element.
 
-**Parameters:**
+**Parameter:**
 
 The textarea element to enhance. If omitted, all textarea elements are enhanced.
 
@@ -75,13 +75,13 @@ epithet.on(el);
 ```
 
 
-###`.off()`
+###`.off(element)`
 
 Disables all enhancements.
 
-**Parameters:**
+**Parameter:**
 
-Disables all enhancements on either the specified element, or all textarea elements. 
+The textarea element to unenhance. If omitted, all textarea elements are unenhanced.
 
 **Example:**
 
