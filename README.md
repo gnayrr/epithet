@@ -1,13 +1,14 @@
 Epithet
 =======
 
-Turns ye olde textarea in to something akin to basic plain text editors of the 80’s. It does so without messing with other native commands like copy/pase, undo/redo, and the contextmenu. This is as native as it gets.
+Native enhancements for ye olde textarea. Does not depend on any other library, and works with native commands out of the box, like copy/paste, undo/redo, and the context menu.
+
 
 ##Features
 
-* Native `tab` support for modern browsers
-* Native undo/redo behavior
-* Adjustable tab size
+* 100% native-ish behavior
+* Customizable enhancements
+* Plays well with other libraries
 
 
 ##Usage
@@ -18,37 +19,36 @@ Turns ye olde textarea in to something akin to basic plain text editors of the 8
   <script src="/path/to/epithet.min.js"></script>
   ```
 
-2. Once your page is loaded, you have 3 ways to use Epithet
+2. Once your page is loaded, you're ready to start using epithet
 
   ```js
-  // Enhance one textarea
-  var element = document.getElementById('textEditor');
-  epithet.on(element);
-  
-  
-  // Enhance all textarea with the 'whateverClass' class
-  epithet.on('whateverClass');
-  
-  // Enhance only textareas that were previously enhanced and currently turned off
-  // This is a little more involved, read the API section below
+  // Enable all enhancements on textareas
   epithet.on();
+
+  // Enable all enhancements on textareas with class 'foobar'
+  epithet.on('foobar');
+
+  // Enable the 'textInput' feature only on textareas
+  epithet.on({
+    textInput: true
+  });
+  
+  // Enable the 'textInput' and 'tab' features on textareas with class 'crimson'
+  epithet.on('crimson', {
+    textInput: true,
+    tab: true
+  });
+
   ```
 
 ##API
 
 ###.on
 
-1. `.on(element:HTMLElement)`
+1. `.on(class:String, config:Object)`
 
-  Enhance the specified element, if it is a textarea element. Otherwise does nothing.
+  if `class` is omitted, every textarea in the current document will be enhanced. 
 
-2. `.on(class:String)`
-
-  Finds all occurrences of textareas with the specified class name. Then enchance each element that is a textarea and has not been enhanced.
-
-3. `.on()`
-
-  Turn on enhancements for all previously enhanced elements. This reverses the effect of `epithet.off()`.
 
 
 ###.off
@@ -68,23 +68,3 @@ Turns ye olde textarea in to something akin to basic plain text editors of the 8
 
 ###.reset()
 Completely remove any trace of Epithet from all elements.
-
-###Element.$epithet
-This is special object added to every enhanced textarea. It offers a number of useful methods.
-
-1. `insertText()`
-1. `getText()`
-1. `setText()`
-1. `getSelection()`
-1. `setSelection()`
-1. `getCursor()`
-1. `setCursor()`
-
-
-
-
-
-
-
-
-
