@@ -54,7 +54,6 @@ Select the enhancements to use.
 ---
 
 
-
 ###`.on(element)`
 
 Enable selected enhancements on textarea elements. Invoking this method on already enhanced elements reconfigures the element.
@@ -77,6 +76,8 @@ Enable selected enhancements on textarea elements. Invoking this method on alrea
 > epithet.on(el);
 > ```
 
+---
+
 
 ###`.off(element)`
 
@@ -96,6 +97,8 @@ Disables all enhancements.
 > var el = document.getElementById('editor');
 > epithet.off(el);
 > ```
+
+---
 
 
 ###`.reset()`
