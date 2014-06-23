@@ -8,8 +8,7 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 
 * 100% native-ish behavior
 * Customizable enhancements
-* Plays well with other libraries
-
+* Supports modern browsers and IE9+
 
 ##Usage
 
@@ -22,49 +21,31 @@ Native enhancements for ye olde textarea. Does not depend on any other library, 
 2. Once your page is loaded, you're ready to start using epithet
 
   ```js
-  // Enable all enhancements on textareas
   epithet.on();
-
-  // Enable all enhancements on textareas with class 'foobar'
-  epithet.on('foobar');
-
-  // Enable the 'textInput' feature only on textareas
-  epithet.on({
-    textInput: true
-  });
-  
-  // Enable the 'textInput' and 'tab' features on textareas with class 'crimson'
-  epithet.on('crimson', {
-    textInput: true,
-    tab: true
-  });
-
   ```
 
 ##API
 
-###.on
+###`.use()`
 
-1. `.on(class:String, config:Object)`
+Set which enhancements are enabled. Also accept `'all'` and `'none'` as parameters to enable/disable all enhancements.
 
-  if `class` is omitted, every textarea in the current document will be enhanced. 
+**Default**: `'all'`
 
+**Alias**: `epithet()`
 
-
-###.off
-
-1. `.off(element:HTMLElement)`
-
-  Turn off Epithet enhancements for the specified element.
-
-2. `.off(class:String)`
-
-  Turn off Epithet enhancements for all elements with the specified class name.
-
-3. `.off()`
-
-  Turn off Epithet enhancements for all elements. 
+**Example**:
 
 
-###.reset()
-Completely remove any trace of Epithet from all elements.
+```js
+var el = document.getElementById('editor');
+
+epithet.use('textInput').on(el);
+
+epithet.use('textInput', 'tab').on(el);
+
+// or use the alias...
+epithet('textInput', 'tab').on(el);
+
+```
+
